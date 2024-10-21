@@ -302,7 +302,7 @@ p {
     }
 
     .navigation {
-        gap: 20px; /* Reduce gap for smaller screens */
+        gap: 10px; /* Reduce gap for smaller screens */
         justify-content: flex-start; /* Align items to the left */
         width: 100%;
     }

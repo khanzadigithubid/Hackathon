@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -7,42 +8,45 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 nav {
     width: 100%;
-    height: auto; /* Changed from fixed height */
+    height: 12vh;
     background-color: #af2882;
     position: sticky;
     top: 0;
+    align-items: center;
+
     z-index: 99999999;
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px; /* Added padding for better spacing */
-    flex-wrap: wrap; /* Allow items to wrap */
+    padding: 0 50px;
 }
 
 nav .logo img {
     width: 60px;
 }
 
+
 nav .navigation {
     display: flex;
     gap: 40px;
-    flex-wrap: wrap;
 }
 
 .navigation a {
     text-decoration: none;
     color: white;
-     transition: color 0.3s ease;
 }
 
 body {
     background-color: white;
     display: flex;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
 }
+
 
 .container {
     position: relative;
@@ -56,11 +60,13 @@ body {
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
+
 .container .left_side {
     position: relative;
     background-color: #550555;
     padding: 40px;
 }
+
 
 .profileText {
     position: relative;
@@ -88,6 +94,7 @@ body {
     object-fit: cover;
 }
 
+
 .profileText h2 {
     color: white;
     font-size: 1.5em;
@@ -103,6 +110,8 @@ body {
     font-weight: 300;
 }
 
+
+
 .contact-info {
     padding-top: 40px;
 }
@@ -115,9 +124,12 @@ body {
     margin-bottom: 20px;
 }
 
+
 .contact-info ul {
     position: relative;
+
 }
+
 
 .contact-info ul li {
     position: relative;
@@ -126,6 +138,10 @@ body {
     cursor: pointer;
 }
 
+
+
+
+
 .contact-info ul li .icon {
     display: inline-block;
     width: 30px;
@@ -133,9 +149,11 @@ body {
     color: #b0e0ec;
 }
 
+
 .contact-info ul li span {
     color: white;
     font-weight: 300;
+
 }
 
 .contact-info ul li a.text:hover {
@@ -152,10 +170,14 @@ body {
     margin-bottom: 18px;
 }
 
+
 .contact-info.education h5 {
     color: #97b4c7;
     font-weight: 500;
 }
+
+
+
 
 .contact-info.education h4:nth-child(2) {
     color: white;
@@ -167,6 +189,8 @@ body {
     font-weight: 300;
 }
 
+
+
 .contact-info.language .percent {
     position: relative;
     width: 100%;
@@ -176,6 +200,7 @@ body {
     margin-top: 5px;
 }
 
+
 .contact-info.language .percent div {
     position: absolute;
     top: 0;
@@ -184,19 +209,24 @@ body {
     background-color: #6d1675;
 }
 
+
 .container .right_side {
     position: relative;
     background-color: white;
     padding: 40px;
 }
 
+
+
 .about {
     margin-bottom: 50px;
+
 }
 
 .about:last-child {
     margin-bottom: 0;
 }
+
 
 .title2 {
     color: #003147;
@@ -208,6 +238,7 @@ body {
 p {
     color: #333;
 }
+
 
 .about .box {
     display: flex;
@@ -229,7 +260,9 @@ p {
     text-transform: uppercase;
     color: black;
     font-size: 16px;
+
 }
+
 
 .skills .box {
     position: relative;
@@ -254,6 +287,7 @@ p {
     height: 10px;
 }
 
+
 .skills .box .percent2 div {
     border-radius: 10px;
     position: absolute;
@@ -262,6 +296,7 @@ p {
     height: 100%;
     background-color: #db20b3;
 }
+
 
 .btn-div {
     display: flex;
@@ -285,7 +320,7 @@ p {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #9c12a8; /* Changed background color for edit button */
+    background-color: #9c187b;
     color: white;
     border: none;
     border-radius: 5px;
@@ -294,22 +329,22 @@ p {
     transition: background-color 0.3s ease;
 } 
 
+.download-btn {
+    background-color: #9c187b;
+}
+
+.edit-btn {
+    background-color: #9c12a8;
+}
+
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Change to column for stacking */
-        align-items: flex-start; /* Align items to the start */
-        padding: 10px; /* Reduce padding */
-    }
-
-    .navigation {
-        gap: 10px; /* Reduce gap for smaller screens */
-        justify-content: flex-start; /* Align items to the left */
-        width: 100%;
+        padding: 0 20px;
     }
 
     .container {
         margin: 20px;
-        grid-template-columns: 1fr; /* Stack columns for smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .left_side,
@@ -330,11 +365,13 @@ p {
 
 @media (max-width: 480px) {
     nav {
-        padding: 10px; /* Reduce padding for even smaller screens */
+        flex-direction: row;
+        align-items: center;
     }
 
     .navigation {
-        gap: 10px; /* Further reduce gap for mobile */
+        flex-direction: row;
+        gap: 10px;
     }
 
     .profileText .imgBox {
@@ -351,11 +388,11 @@ p {
     }
 
     .about .box {
-        flex-direction: column; /* Stack boxes vertically */
+        flex-direction: column;
     }
 
     .skills .box {
-        grid-template-columns: 1fr; /* Stack skill boxes */
+        grid-template-columns: 1fr;
     }
 
     .download-btn,

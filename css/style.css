@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
 
 nav {
     width: 100%;
@@ -16,7 +14,6 @@ nav {
     position: sticky;
     top: 0;
     align-items: center;
-
     z-index: 99999999;
     display: flex;
     justify-content: space-between;
@@ -26,7 +23,6 @@ nav {
 nav .logo img {
     width: 60px;
 }
-
 
 nav .navigation {
     display: flex;
@@ -41,12 +37,10 @@ nav .navigation {
 body {
     background-color: white;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
 }
-
 
 .container {
     position: relative;
@@ -60,13 +54,11 @@ body {
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
-
 .container .left_side {
     position: relative;
     background-color: #550555;
     padding: 40px;
 }
-
 
 .profileText {
     position: relative;
@@ -94,7 +86,6 @@ body {
     object-fit: cover;
 }
 
-
 .profileText h2 {
     color: white;
     font-size: 1.5em;
@@ -110,8 +101,6 @@ body {
     font-weight: 300;
 }
 
-
-
 .contact-info {
     padding-top: 40px;
 }
@@ -124,12 +113,9 @@ body {
     margin-bottom: 20px;
 }
 
-
 .contact-info ul {
     position: relative;
-
 }
-
 
 .contact-info ul li {
     position: relative;
@@ -138,10 +124,6 @@ body {
     cursor: pointer;
 }
 
-
-
-
-
 .contact-info ul li .icon {
     display: inline-block;
     width: 30px;
@@ -149,11 +131,9 @@ body {
     color: #b0e0ec;
 }
 
-
 .contact-info ul li span {
     color: white;
     font-weight: 300;
-
 }
 
 .contact-info ul li a.text:hover {
@@ -170,14 +150,10 @@ body {
     margin-bottom: 18px;
 }
 
-
 .contact-info.education h5 {
     color: #97b4c7;
     font-weight: 500;
 }
-
-
-
 
 .contact-info.education h4:nth-child(2) {
     color: white;
@@ -189,8 +165,6 @@ body {
     font-weight: 300;
 }
 
-
-
 .contact-info.language .percent {
     position: relative;
     width: 100%;
@@ -200,7 +174,6 @@ body {
     margin-top: 5px;
 }
 
-
 .contact-info.language .percent div {
     position: absolute;
     top: 0;
@@ -209,24 +182,19 @@ body {
     background-color: #6d1675;
 }
 
-
 .container .right_side {
     position: relative;
     background-color: white;
     padding: 40px;
 }
 
-
-
 .about {
     margin-bottom: 50px;
-
 }
 
 .about:last-child {
     margin-bottom: 0;
 }
-
 
 .title2 {
     color: #003147;
@@ -238,7 +206,6 @@ body {
 p {
     color: #333;
 }
-
 
 .about .box {
     display: flex;
@@ -260,9 +227,7 @@ p {
     text-transform: uppercase;
     color: black;
     font-size: 16px;
-
 }
-
 
 .skills .box {
     position: relative;
@@ -287,7 +252,6 @@ p {
     height: 10px;
 }
 
-
 .skills .box .percent2 div {
     border-radius: 10px;
     position: absolute;
@@ -296,7 +260,6 @@ p {
     height: 100%;
     background-color: #db20b3;
 }
-
 
 .btn-div {
     display: flex;
@@ -320,7 +283,7 @@ p {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #9c187b;
+    background-color: #9c12a8; /* Changed background color for edit button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -329,22 +292,21 @@ p {
     transition: background-color 0.3s ease;
 } 
 
-.download-btn {
-    background-color: #9c187b;
-}
-
-.edit-btn {
-    background-color: #9c12a8;
-}
-
 @media (max-width: 768px) {
     nav {
-        padding: 0 20px;
+        flex-direction: column; /* Change to column for stacking */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .navigation {
+        gap: 20px; /* Reduce gap for smaller screens */
+        flex-wrap: wrap; /* Allow wrapping if needed */
     }
 
     .container {
         margin: 20px;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack columns for smaller screens */
     }
 
     .left_side,
@@ -365,13 +327,11 @@ p {
 
 @media (max-width: 480px) {
     nav {
-        flex-direction: row;
-        align-items: flex-start;
+        padding: 10px; /* Reduce padding for even smaller screens */
     }
 
     .navigation {
-        flex-direction: column;
-        gap: 20px;
+        gap: 10px; /* Further reduce gap for mobile */
     }
 
     .profileText .imgBox {
@@ -388,11 +348,11 @@ p {
     }
 
     .about .box {
-        flex-direction: column;
+        flex-direction: column; /* Stack boxes vertically */
     }
 
     .skills .box {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack skill boxes */
     }
 
     .download-btn,
